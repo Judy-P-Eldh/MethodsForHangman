@@ -2,7 +2,6 @@
 
 using MethodsForHangman;
 
-
-var startCount = new Count();
-startCount.StartCount();
+var handler = new Handler();
+handler.StartMethod();
 
