@@ -43,6 +43,12 @@ namespace MethodsForHangman
         {
             Console.WriteLine("Poäng: 10");   //Ska räkna ner
             Console.WriteLine("Gissa hela ordet");  //Ska vara möjlig att välja endast en gång.
+            Console.WriteLine("Du har gissat på: ");
+        }
+
+        public void CursorPosition()
+        {
+            Console.SetCursorPosition(20, 0);
         }
     }
 }

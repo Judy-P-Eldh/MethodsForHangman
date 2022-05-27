@@ -13,9 +13,6 @@ namespace MethodsForHangman
             var startCount = new Count();
             startCount.StartCount();
 
-            var guessedChars = new GuessedChars();
-            guessedChars.SaveGuesses();
-
             var guessWordOnce = new GuessWordOnce();
             guessWordOnce.CheckWordGuess(false);  //Om true körs inte metoden, vilket är som tänkt.
         }
