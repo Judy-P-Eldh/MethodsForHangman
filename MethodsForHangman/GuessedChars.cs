@@ -21,6 +21,7 @@ namespace MethodsForHangman
                 alpha.Remove(guess);
             }
             alpha.ForEach(c => Console.Write(c));
+            Console.WriteLine();
         }
     }
 }

@@ -15,6 +15,9 @@ namespace MethodsForHangman
 
             var guessedChars = new GuessedChars();
             guessedChars.SaveGuesses();
+
+            var guessWordOnce = new GuessWordOnce();
+            guessWordOnce.WordGuess();
         }
          
     }
