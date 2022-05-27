@@ -10,9 +10,9 @@ namespace MethodsForHangman
     {
         public void StartMethod()
         {
-            var startCount = new Count();
-            startCount.StartCount();
-
+            var ui = new UI();
+            ui.StartMenu();
+           
             var guessWordOnce = new GuessWordOnce();
             guessWordOnce.CheckWordGuess(false);  //Om true körs inte metoden, vilket är som tänkt.
         }

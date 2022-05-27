@@ -8,12 +8,14 @@ namespace MethodsForHangman
 {
     public class UI
     {
+
         public void Print(string message)
         {
             Console.WriteLine(message);
         }
         public void StartMenu()
         {
+            var play = new Play();
             Dictionary<int, string> startMenu = new Dictionary<int, string>();
 
             Print("Välkommen!\n--------------" +
@@ -27,7 +29,7 @@ namespace MethodsForHangman
             switch (input)
             {
                 case "1":
-                    //Play();
+                    play.PlayGame();
                     break;
                 case "2":
                     //Rules();
@@ -39,6 +41,8 @@ namespace MethodsForHangman
                     break;
             }
         }
+
+        
         public void PlayMenu()
         {
             Console.WriteLine("Poäng: 10");   //Ska räkna ner
