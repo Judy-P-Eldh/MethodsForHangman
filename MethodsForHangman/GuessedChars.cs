@@ -8,21 +8,19 @@ namespace MethodsForHangman
 {
     public class GuessedChars
     {
-        char[] alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".ToCharArray();
-        
         public void SaveGuesses()
         {
-            Console.WriteLine(alpha);
-            string guess = Console.ReadLine().ToUpper().Trim();  //Gjorde en array från början, men tog bort den. Behöver detta också vara en array?
+            var alpha = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Å", "Ä", "Ö" };
 
-            foreach (var c in guess)
+            alpha.ForEach(c => Console.Write(c));
+            Console.WriteLine();
+            string guess = Console.ReadLine().ToUpper().Trim();
+
+            if (alpha.Contains(guess))
             {
-                if (alpha.Contains(c))
-                {
-                    alpha[c].ToString().Remove(c);     //Hur tar jag bort bokstaven ur alpha?
-                }
+                alpha.Remove(guess);
             }
-            Console.WriteLine(alpha);
+            alpha.ForEach(c => Console.Write(c));
         }
     }
 }
